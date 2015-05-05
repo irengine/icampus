@@ -1,0 +1,38 @@
+# Disable the spring security default configuration from spring-boot-actuator
+management.security.enabled: true
+security.basic.enabled: false
+
+# Disable Jolokia - An http/json bridge for remote JMX access
+endpoints.jolokia.enabled: false
+
+# security configuration (this key should be unique for your application, and kept secret)
+jhipster.security.rememberme.key: 09fcd5b90e27f006b14f223fbd588333cd7219b7
+
+async:
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 10000
+
+mail:
+    host: localhost
+    port: 25
+    username:
+    password:
+    protocol: smtp
+    tls: false
+    auth: false
+    from: icampus@localhost
+
+authentication:
+    xauth:
+        secret: myXAuthSecret
+        # Token is valid 30 minutes
+        tokenValidityInSeconds: 1800
+
+swagger:
+    title: icampus API
+    description: icampus applications and beyond!
+    termsOfServiceUrl: http://jhipster.github.io/
+    contact:
+    license: Apache 2.0
+    licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html

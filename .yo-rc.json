@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "icampus",
+    "packageName": "com.irengine.campus",
+    "packageFolder": "com/irengine/campus",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "7",
+    "rememberMeKey": "09fcd5b90e27f006b14f223fbd588333cd7219b7"
+  }
+}
