@@ -27,7 +27,7 @@ angular.module('icampusApp')
  They are written in English to avoid character encoding issues (not a perfect solution)
  */
     .constant('LANGUAGES', [
-        'en', 'fr'
+        'en', 'zh-cn'
         //JHipster will add new languages here
     ]
 );
