@@ -1,0 +1,20 @@
+{
+    "icampusApp": {
+        "device" : {
+            "home": {
+                "title": "Devices",
+                "createLabel": "Create a new Device",
+                "createOrEditLabel": "Create or edit a Device"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Device {{ id }}?"
+            },
+            "detail": {
+                "title": "Device"
+            },
+            "category": "Category",
+            "serialNumber": "SerialNumber",
+            "user": "user"
+        }
+    }
+}

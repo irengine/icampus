@@ -1,0 +1,20 @@
+{
+    "icampusApp": {
+        "device" : {
+            "home": {
+                "title": "设备",
+                "createLabel": "创建新设备",
+                "createOrEditLabel": "创建或编辑设备"
+            },
+            "delete": {
+                "question": "是否确定删除设备 {{ id }}?"
+            },
+            "detail": {
+                "title": "设备"
+            },
+            "category": "类别",
+            "serialNumber": "序列号",
+            "user": "用户"
+        }
+    }
+}

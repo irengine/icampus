@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity Device.
+    -->
+    <changeSet id="20150506074058" author="jhipster">
+        <createTable tableName="CAS_DEVICE">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="category" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="serial_number" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="user_id" type="bigint"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="CAS_DEVICE"
+                                 constraintName="fk_device_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="CAS_USER"/>
+
+    </changeSet>
+</databaseChangeLog>

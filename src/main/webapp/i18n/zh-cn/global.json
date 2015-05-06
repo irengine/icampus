@@ -7,6 +7,7 @@
             "entities": {
                 "main": "Entities",
                 "unit": "Unit",
+                "device": "Device",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
