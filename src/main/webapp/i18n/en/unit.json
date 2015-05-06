@@ -1,0 +1,24 @@
+{
+    "icampusApp": {
+        "unit" : {
+            "home": {
+                "title": "Units",
+                "createLabel": "Create a new Unit",
+                "createOrEditLabel": "Create or edit a Unit"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Unit {{ id }}?"
+            },
+            "detail": {
+                "title": "Unit"
+            },
+            "name": "Name",
+            "uriName": "UriName",
+            "category": "Category",
+            "leftId": "Left",
+            "rightId": "Right",
+            "manager": "Manager",
+            "parent": "Parent Unit"
+        }
+    }
+}

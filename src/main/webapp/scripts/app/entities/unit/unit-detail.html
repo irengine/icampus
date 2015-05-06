@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="icampusApp.unit.detail.title">Unit</span> {{unit.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.unit.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{unit.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.unit.uriName">UriName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{unit.uriName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.unit.category">Category</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{unit.category}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.unit.leftId">LeftId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{unit.leftId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.unit.rightId">RightId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{unit.rightId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.unit.manager">manager</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{unit.manager.login}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.unit.parent">parent</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{unit.parent.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="unit"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

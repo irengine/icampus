@@ -1,0 +1,24 @@
+{
+    "icampusApp": {
+        "unit" : {
+            "home": {
+                "title": "组织",
+                "createLabel": "创建新组织",
+                "createOrEditLabel": "创建或编辑组织"
+            },
+            "delete": {
+                "question": "是否确定删除组织 {{ id }}?"
+            },
+            "detail": {
+                "title": "组织"
+            },
+            "name": "名称",
+            "uriName": "完整名称",
+            "category": "类别",
+            "leftId": "左",
+            "rightId": "右",
+            "manager": "负责人",
+            "parent": "上级组织"
+        }
+    }
+}

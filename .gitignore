@@ -127,3 +127,9 @@ Desktop.ini
 # Gradle Wrapper
 ######################
 !gradle/wrapper/gradle-wrapper.jar
+
+######################
+# Runtime
+######################
+/src/main/resources/.h2.server.properties
+/.jhipster/**
