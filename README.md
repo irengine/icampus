@@ -18,3 +18,33 @@ README for icampus
 +  mvn spring-boot:run
 +  grunt serve
 
+## Development ##
++  create new entity, yo jhipster:entity dummy
++  modify existing entity, mvn liquibase:diff
+
+### liquibase setting
++  pom.xml
+
+                 <configuration>
+                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
+                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog
+        -                    <driver></driver>
+        -                    <url></url>
+        +                    <driver>org.h2.Driver</driver>
+        +                    <url>jdbc:h2:file:~/.h2/icampus;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1</url>
+                     <defaultSchemaName></defaultSchemaName>
+                     <username></username>
+                     <password></password>
+        -                    <referenceUrl>hibernate:spring:com.irengine.campus.domain?dialect=</referenceUrl>
+        +                    <referenceUrl>hibernate:spring:com.irengine.campus.domain?dialect=org.hibernate.dialect.H2Dialect</
+                     <verbose>true</verbose>
+                     <logging>debug</logging>
+                 </configuration>
++  src/main/resources/config/application-dev.yml
+
+        -        url: jdbc:h2:mem:jhipster;DB_CLOSE_DELAY=-1
+        +        url: jdbc:h2:file:~/.h2/icampus;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1
+
+### Liquibase Configuration File ###
+
++ src/main/resources/config/liquibase/master.xml
