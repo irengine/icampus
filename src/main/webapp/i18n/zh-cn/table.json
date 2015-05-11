@@ -1,0 +1,24 @@
+{
+    "icampusApp": {
+        "table" : {
+            "home": {
+                "title": "表格",
+                "createLabel": "创建新表格",
+                "createOrEditLabel": "创建或编辑表格"
+            },
+            "delete": {
+                "question": "是否确定删除表格 {{ id }}?"
+            },
+            "detail": {
+                "title": "表格"
+            },
+            "name": "名称",
+            "uriName": "完整名称",
+            "category": "类别",
+            "leftId": "左",
+            "rightId": "右",
+            "manager": "负责人",
+            "parent": "上级表格"
+        }
+    }
+}

@@ -45,36 +45,41 @@ angular.module('icampusApp', ['LocalStorageModule', 'tmh.dynamicLocale',
             }
         };
     })
-    
+
     .factory('authInterceptor', function ($rootScope, $q, $location, localStorageService) {
         return {
             // Add authorization token to headers
             request: function (config) {
                 config.headers = config.headers || {};
                 var token = localStorageService.get('token');
-                
+
                 if (token && token.expires && token.expires > new Date().getTime()) {
                   config.headers['x-auth-token'] = token.token;
                 }
-                
+
                 return config;
             }
         };
     })
-    
+
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $translateProvider, tmhDynamicLocaleProvider, httpRequestInterceptorCacheBusterProvider) {
 
         //Cache everything except rest api requests
         httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/, /.*protected.*/], true);
 
         $urlRouterProvider.otherwise('/');
-        $stateProvider.state('site', {
+        $stateProvider
+            .state('site', {
             'abstract': true,
             views: {
                 'navbar@': {
                     templateUrl: 'scripts/components/navbar/navbar.html',
-                    controller: 'NavbarController'
-                }
+                    controller: 'NavbarController',
+                },
+                 'aside@': {
+                 templateUrl: 'scripts/app/aside/aside.html',
+                 controller: 'AsideController',
+                 },
             },
             resolve: {
                 authorize: ['Auth',
@@ -87,7 +92,7 @@ angular.module('icampusApp', ['LocalStorageModule', 'tmh.dynamicLocale',
                     $translatePartialLoader.addPart('language');
                     return $translate.refresh();
                 }]
-            }
+            },
         });
 
         $httpProvider.interceptors.push('authInterceptor');

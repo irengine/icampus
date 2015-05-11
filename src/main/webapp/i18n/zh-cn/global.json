@@ -8,6 +8,8 @@
                 "main": "Entities",
                 "unit": "Unit",
                 "device": "Device",
+                "form": "Form",
+                "table":  "Table",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

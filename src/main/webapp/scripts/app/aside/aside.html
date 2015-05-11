@@ -1,0 +1,192 @@
+
+<div class="aside-wrap">
+    <ul class="nav  nav-stacked">
+
+        <li ui-sref-active="active">
+            <a ui-sref="home">
+                <span class="glyphicon glyphicon-home"></span>
+                <span translate="global.menu.home">Home</span>
+            </a>
+        </li>
+
+        <li class="dropdown pointer">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+           <span>
+               <span class="glyphicon glyphicon-th-list"></span>
+               <span>
+                   Entities
+               </span>
+               <b class="caret"></b>
+           </span>
+            </a>
+            <ul class="dropdown-menu">
+                <li ui-sref-active="active" ><a ui-sref="unit"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.entities.unit">unit</span></a></li>
+                <li ui-sref-active="active" ><a ui-sref="device"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.entities.device">device</span></a></li>
+
+            </ul>
+        </li>
+
+
+   <!-- <li ui-sref-active="active">
+        <a ui-sref="app.calendar">
+            <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
+            <span class="font-bold" translate="aside.nav.CALENDAR">Calendar</span>
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.mail.list">
+            <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+            <span class="font-bold" translate="aside.nav.EMAIL">Email</span>
+        </a>
+    </li>
+    <li>
+        <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+            <i class="glyphicon glyphicon-th-large icon text-success"></i>
+            <span class="font-bold">Apps</span>
+        </a>
+        <ul class="nav nav-sub">
+            <li class="nav-sub-header">
+                <a href>
+                    <span>Apps</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="apps.note">
+                    <span>Note</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="apps.contact">
+                    <span>Contacts</span>
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="app.weather">
+                    <span>Weather</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+   <li class="dropdown pointer">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="">
+           <span>
+               <span class="glyphicon glyphicon-th-list"></span>
+               <span>
+                   Entities
+               </span>
+               <b class="caret"></b>
+           </span>
+       </a>
+       <ul class="dropdown-menu">
+           <li ui-sref-active="active" ><a ui-sref="unit"><span class="glyphicon glyphicon-asterisk"></span>
+               &#xA0;<span translate="global.menu.entities.unit">unit</span></a></li>
+           <li ui-sref-active="active" ><a ui-sref="device"><span class="glyphicon glyphicon-asterisk"></span>
+               &#xA0;<span translate="global.menu.entities.device">device</span></a></li>
+
+       </ul>
+   </li>-->
+
+
+</ul>
+
+    <ul class="nav nav-stacked">
+        <li ui-sref-active="active">
+            <a ui-sref="home">
+                <span class="glyphicon glyphicon-home"></span>
+                <span translate="global.menu.home">Home</span>
+            </a>
+        </li>
+        <li ui-sref-active="active" ng-switch-when="true" class="dropdown pointer">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span>
+                                    <span class="glyphicon glyphicon-th-list"></span>
+                                    <span class="hidden-tablet" translate="global.menu.entities.main">
+                                        Entities
+                                    </span>
+                                    <b class="caret"></b>
+                                </span>
+            </a>
+            <ul class="dropdown-menu">
+                <li ui-sref-active="active" ><a ui-sref="unit"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.entities.unit">unit</span></a></li>
+                <li ui-sref-active="active" ><a ui-sref="device"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.entities.device">device</span></a></li>
+                <li ui-sref-active="active" ><a ui-sref="form"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.entities.form">form</span></a></li>
+
+            </ul>
+        </li>
+        <li ng-class="{active: $state.includes('account')}" class="dropdown pointer">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span>
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    <span class="hidden-tablet" translate="global.menu.account.main">
+                                        Account
+                                    </span>
+                                    <b class="caret"></b>
+                                </span>
+            </a>
+            <ul class="dropdown-menu">
+                <li ui-sref-active="active" ng-switch-when="true"><a ui-sref="settings"><span class="glyphicon glyphicon-wrench"></span>
+                    &#xA0;<span translate="global.menu.account.settings">Settings</span></a></li>
+                <li ui-sref-active="active" ng-switch-when="true"><a ui-sref="password"><span class="glyphicon glyphicon-lock"></span>
+                    &#xA0;<span translate="global.menu.account.password">Password</span></a></li>
+                <li ui-sref-active="active" ng-switch-when="true"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span>
+                    &#xA0;<span translate="global.menu.account.logout">Log out</span></a></li>
+                <li ui-sref-active="active" ng-switch-when="false"><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span>
+                    &#xA0;<span translate="global.menu.account.login">Authenticate</span></a></li>
+
+                <li ui-sref-active="active" ng-switch-when="false"><a ui-sref="register"><span class="glyphicon glyphicon-plus-sign"></span>
+                    &#xA0;<span translate="global.menu.account.register">Register</span></a></li>
+            </ul>
+        </li>
+        <li ng-class="{active: $state.includes('admin')}"  ng-switch-when="true" has-role="ROLE_ADMIN" class="dropdown pointer">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span>
+                                    <span class="glyphicon glyphicon-tower"></span>
+                                    <span class="hidden-tablet" translate="global.menu.admin.main">Admin</span>
+                                    <b class="caret"></b>
+                                </span>
+            </a>
+            <ul class="dropdown-menu">
+                <li ui-sref-active="active"><a ui-sref="metrics"><span class="glyphicon glyphicon-dashboard"></span>
+                    &#xA0;<span translate="global.menu.admin.metrics">Metrics</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="health"><span class="glyphicon glyphicon-heart"></span>
+                    &#xA0;<span translate="global.menu.admin.health">Health</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="configuration"><span class="glyphicon glyphicon-list-alt"></span>
+                    &#xA0;<span translate="global.menu.admin.configuration">Configuration</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="audits"><span class="glyphicon glyphicon-bell"></span>
+                    &#xA0;<span translate="global.menu.admin.audits">Audits</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="logs"><span class="glyphicon glyphicon-tasks"></span>
+                    &#xA0;<span translate="global.menu.admin.logs">Logs</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="docs"><span class="glyphicon glyphicon-book"></span>
+                    &#xA0;<span translate="global.menu.admin.apidocs">API Docs</span></a></li>
+                <li ng-show="{{ENV === 'dev'}}"><a href='/console' target="_tab"><span class="glyphicon glyphicon-hdd"></span>
+                    &#xA0;<span translate="global.menu.admin.database">Database</span></a></li>
+            </ul>
+        </li>
+        <li ui-sref-active="active" class="dropdown pointer" ng-controller="LanguageController">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span>
+                                    <span class="glyphicon glyphicon-flag"></span>
+                                    <span class="hidden-tablet" translate="global.menu.language">Language</span>
+                                    <b class="caret"></b>
+                                </span>
+            </a>
+            <ul class="dropdown-menu">
+                <li active-menu="{{language}}" ng-repeat="language in languages">
+                    <a href="" ng-click="changeLanguage(language)">{{'language.' + language| translate}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+</div>

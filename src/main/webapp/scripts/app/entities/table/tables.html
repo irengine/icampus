@@ -1,18 +1,18 @@
 <div>
 
-    <h2 translate="icampusApp.unit.home.title">Unit</h2>
+    <h2 translate="icampusApp.table.home.title">Table</h2>
 
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#saveUnitModal" ng-click="clear()">
-                    <span class="glyphicon glyphicon-flash"></span> <span translate="icampusApp.unit.home.createLabel">Create a new Unit</span>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveTableModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="icampusApp.table.home.createLabel">Create a new Table</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="saveUnitModal" tabindex="-1" role="dialog" aria-labelledby="myUnitLabel"
+    <div class="modal fade" id="saveTableModal" tabindex="-1" role="dialog" aria-labelledby="myTableLabel"
          aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -21,19 +21,19 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
-                        <h4 class="modal-title" id="myUnitLabel" translate="icampusApp.unit.home.createOrEditLabel">Create or edit a Unit</h4>
+                        <h4 class="modal-title" id="myTableLabel" translate="icampusApp.table.home.createOrEditLabel">Create or edit a Table</h4>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
                             <label>ID</label>
                             <input type="text" class="form-control" name="id"
-                                   ng-model="unit.id" readonly>
+                                   ng-model="table.id" readonly>
                         </div>
 
                         <div class="form-group">
-                            <label translate="icampusApp.unit.name">Name</label>
+                            <label translate="icampusApp.table.name">Name</label>
                             <input type="text" class="form-control" name="name"
-                                   ng-model="unit.name" required>
+                                   ng-model="table.name" required>
 
                             <div ng-show="editForm.name.$invalid">
                                 <p class="help-block"
@@ -43,9 +43,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label translate="icampusApp.unit.uriName">UriName</label>
+                            <label translate="icampusApp.table.uriName">UriName</label>
                             <input type="text" class="form-control" name="uriName"
-                                   ng-model="unit.uriName" required>
+                                   ng-model="table.uriName" required>
 
                             <div ng-show="editForm.uriName.$invalid">
                                 <p class="help-block"
@@ -55,9 +55,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label translate="icampusApp.unit.category">Category</label>
+                            <label translate="icampusApp.table.category">Category</label>
                             <input type="text" class="form-control" name="category"
-                                   ng-model="unit.category" required>
+                                   ng-model="table.category" required>
 
                             <div ng-show="editForm.category.$invalid">
                                 <p class="help-block"
@@ -67,9 +67,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label translate="icampusApp.unit.leftId">LeftId</label>
+                            <label translate="icampusApp.table.leftId">LeftId</label>
                             <input type="number" class="form-control" name="leftId"
-                                   ng-model="unit.leftId" required>
+                                   ng-model="table.leftId" required>
 
                             <div ng-show="editForm.leftId.$invalid">
                                 <p class="help-block"
@@ -83,9 +83,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label translate="icampusApp.unit.rightId">RightId</label>
+                            <label translate="icampusApp.table.rightId">RightId</label>
                             <input type="number" class="form-control" name="rightId"
-                                   ng-model="unit.rightId" required>
+                                   ng-model="table.rightId" required>
 
                             <div ng-show="editForm.rightId.$invalid">
                                 <p class="help-block"
@@ -100,13 +100,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label translate="icampusApp.unit.manager">manager</label>
-                            <select class="form-control" name="manager" ng-model="unit.manager.id" ng-options="user.id as user.login for user in users">
+                            <label translate="icampusApp.table.manager">manager</label>
+                            <select class="form-control" name="manager" ng-model="table.manager.id" ng-options="user.id as user.login for user in users">
                             </select>
                         </div>
                         <div class="form-group">
-                            <label translate="icampusApp.unit.parent">parent</label>
-                            <select class="form-control" name="parent" ng-model="unit.parent.id" ng-options="unit.id as unit.name for unit in units">
+                            <label translate="icampusApp.table.parent">parent</label>
+                            <select class="form-control" name="parent" ng-model="table.parent.id" ng-options="table.id as table.name for table in tables">
                             </select>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                             <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
                         </button>
                         <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Saveaaa</span>
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
                         </button>
                     </div>
                 </form>
@@ -123,17 +123,17 @@
         </div>
     </div>
 
-    <div class="modal fade" id="deleteUnitConfirmation">
+    <div class="modal fade" id="deleteTableConfirmation">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form name="deleteForm" ng-submit="confirmDelete(unit.id)">
+                <form name="deleteForm" ng-submit="confirmDelete(table.id)">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                                 ng-click="clear()">&times;</button>
                         <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
                     </div>
                     <div class="modal-body">
-                        <p translate="icampusApp.unit.delete.question" translate-values="{id: '{{unit.id}}'}">Are you sure you want to delete this Unit?</p>
+                        <p translate="icampusApp.table.delete.question" translate-values="{id: '{{table.id}}'}">Are you sure you want to delete this Table?</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
@@ -153,39 +153,39 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th translate="icampusApp.unit.name">Name</th>
-                    <th translate="icampusApp.unit.uriName">UriName</th>
-                    <th translate="icampusApp.unit.category">Category</th>
-                    <th translate="icampusApp.unit.leftId">LeftId</th>
-                    <th translate="icampusApp.unit.rightId">RightId</th>
-                    <th translate="icampusApp.unit.manager">manager</th>
-                    <th translate="icampusApp.unit.parent">parent</th>
+                    <th translate="icampusApp.table.name">Name</th>
+                    <th translate="icampusApp.table.uriName">UriName</th>
+                    <th translate="icampusApp.table.category">Category</th>
+                    <th translate="icampusApp.table.leftId">LeftId</th>
+                    <th translate="icampusApp.table.rightId">RightId</th>
+                    <th translate="icampusApp.table.manager">manager</th>
+                    <th translate="icampusApp.table.parent">parent</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="unit in units">
-                    <td><a ui-sref="unitDetail({id:unit.id})">{{unit.id}}</a></td>
-                    <td>{{unit.name}}</td>
-                    <td>{{unit.uriName}}</td>
-                    <td>{{unit.category}}</td>
-                    <td>{{unit.leftId}}</td>
-                    <td>{{unit.rightId}}</td>
-                    <td>{{unit.manager.login}}</td>
-                    <td>{{unit.parent.name}}</td>
+                <tr ng-repeat="table in tables">
+                    <td><a ui-sref="tableDetail({id:table.id})">{{table.id}}</a></td>
+                    <td>{{table.name}}</td>
+                    <td>{{table.uriName}}</td>
+                    <td>{{table.category}}</td>
+                    <td>{{table.leftId}}</td>
+                    <td>{{table.rightId}}</td>
+                    <td>{{table.manager.login}}</td>
+                    <td>{{table.parent.name}}</td>
                     <td>
                         <button type="submit"
-                                ui-sref="unitDetail({id:unit.id})"
+                                ui-sref="tableDetail({id:table.id})"
                                 class="btn btn-info btn-sm">
                             <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
                         </button>
                         <button type="submit"
-                                ng-click="update(unit.id)"
+                                ng-click="update(table.id)"
                                 class="btn btn-primary btn-sm">
                             <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
                         </button>
                         <button type="submit"
-                                ng-click="delete(unit.id)"
+                                ng-click="delete(table.id)"
                                 class="btn btn-danger btn-sm">
                             <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
                         </button>

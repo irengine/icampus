@@ -22,13 +22,20 @@
         <![endif]-->
         <div ng-show="{{ENV === 'dev'}}" class="development" ng-cloak=""></div>
         <div ui-view="navbar" ng-cloak=""></div>
-        <div class="container">
-            <div class="well" ui-view="content"></div>
 
-            <div class="footer">
-                <p translate="footer">This is your footer</p>
+        <div class="body">
+            <div ui-view="aside"></div>
+
+            <div class="container">
+                <div class="well" ui-view="content"></div>
+
+                <div class="footer">
+                    <p translate="footer">This is your footer</p>
+                </div>
             </div>
+
         </div>
+
 
         <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
         <script>
@@ -117,6 +124,9 @@
         <script src="scripts/app/error/error.js"></script>
         <script src="scripts/app/main/main.js"></script>
         <script src="scripts/app/main/main.controller.js"></script>
+        <script src="scripts/app/aside/aside.js"></script>
+        <script src="scripts/app/aside/aside.controller.js"></script>
+        <script src="scripts/app/aside/aside.directive.js"></script>
         <script src="scripts/components/auth/provider/auth.xauth.service.js"></script>
         <script src="scripts/app/entities/unit/unit.js"></script>
         <script src="scripts/app/entities/unit/unit.controller.js"></script>
@@ -126,6 +136,14 @@
         <script src="scripts/app/entities/device/device.controller.js"></script>
         <script src="scripts/app/entities/device/device-detail.controller.js"></script>
         <script src="scripts/components/entities/device/device.service.js"></script>
+        <script src="scripts/app/entities/form/form.js"></script>
+        <script src="scripts/app/entities/form/form.controller.js"></script>
+        <script src="scripts/app/entities/form/form-detail.controller.js"></script>
+        <script src="scripts/components/entities/form/form.service.js"></script>
+        <script src="scripts/app/entities/table/table.js"></script>
+        <script src="scripts/app/entities/table/table.controller.js"></script>
+        <script src="scripts/app/entities/table/table-detail.controller.js"></script>
+        <script src="scripts/components/entities/table/table.service.js"></script>
         <!-- endbuild -->
 </body>
 </html>

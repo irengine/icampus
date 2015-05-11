@@ -1,0 +1,24 @@
+{
+    "icampusApp": {
+        "table" : {
+            "home": {
+                "title": "Tables",
+                "createLabel": "Create a new Table",
+                "createOrEditLabel": "Create or edit a Table"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Table {{ id }}?"
+            },
+            "detail": {
+                "title": "Table"
+            },
+            "name": "Name",
+            "uriName": "UriName",
+            "category": "Category",
+            "leftId": "Left",
+            "rightId": "Right",
+            "manager": "Manager",
+            "parent": "Parent Table"
+        }
+    }
+}

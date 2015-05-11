@@ -22,7 +22,7 @@ Developement Ribbon
     left: 0;
     border: 0;
     z-index: 1000;
-    background-image: url("../images/development_ribbon.png");
+    /*background-image: url("../images/development_ribbon.png");*/
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -145,3 +145,25 @@ ul#strength {
     width:20px;
 }
 /* end Password strength bar style */
+.aside-wrap{
+    width: 200px;
+    height: 100%;
+    float: left;
+    margin-left: 10px;
+    border:1px solid #eee;
+}
+.well{
+  /*  width: 90%;*/
+    margin-left: 150px;
+}
+
+
+/*responsive view*/
+@media(max-width: 768px){
+    .aside-wrap{
+        display: none;
+    }
+    .well{
+        margin-left: 0px;
+    }
+}

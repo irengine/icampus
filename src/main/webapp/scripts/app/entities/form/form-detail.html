@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="icampusApp.form.detail.title">Form</span> {{form.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.form.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{form.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.form.uriName">UriName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{form.uriName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.form.category">Category</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{form.category}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.form.leftId">LeftId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{form.leftId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.form.rightId">RightId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{form.rightId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.form.manager">manager</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{form.manager.login}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.form.parent">parent</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{form.parent.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="form"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

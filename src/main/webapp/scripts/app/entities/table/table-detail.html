@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="icampusApp.table.detail.title">Table</span> {{table.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.table.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{table.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.table.uriName">UriName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{table.uriName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.table.category">Category</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{table.category}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.table.leftId">LeftId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{table.leftId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.table.rightId">RightId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{table.rightId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.table.manager">manager</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{table.manager.login}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="icampusApp.table.parent">parent</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{table.parent.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="table"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
