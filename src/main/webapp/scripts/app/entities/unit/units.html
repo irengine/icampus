@@ -9,6 +9,16 @@
                     <span class="glyphicon glyphicon-flash"></span> <span translate="icampusApp.unit.home.createLabel">Create a new Unit</span>
                 </button>
             </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="searchCondition" ng-model="searchCondition" placeholder="Name">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" ng-click="search()">
+                    <span class="glyphicon glyphicon-search"></span> <span translate="icampusApp.search">Search</span>
+                </button>
+            </div>
         </div>
     </div>
 

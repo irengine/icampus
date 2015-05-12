@@ -11,6 +11,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -72,9 +73,16 @@ public class UnitResource {
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
     public ResponseEntity<List<Unit>> getAll(@RequestParam(value = "page" , required = false) Integer offset,
-                                  @RequestParam(value = "per_page", required = false) Integer limit)
+                                             @RequestParam(value = "per_page", required = false) Integer limit,
+                                             @RequestParam(value = "searchCondition", required = false) String searchCondition
+                                             )
         throws URISyntaxException {
-        Page<Unit> page = unitRepository.findAll(PaginationUtil.generatePageRequest(offset, limit));
+
+        // StringUtils.isEmpty()
+        // like
+        searchCondition = searchCondition + "%";
+
+        Page<Unit> page = unitRepository.findAllByName(searchCondition, PaginationUtil.generatePageRequest(offset, limit));
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/units", offset, limit);
         return new ResponseEntity<List<Unit>>(page.getContent(), headers, HttpStatus.OK);
     }

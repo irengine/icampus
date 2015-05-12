@@ -5,8 +5,9 @@ angular.module('icampusApp')
         $scope.units = [];
         $scope.users = User.query();
         $scope.page = 1;
+        $scope.searchCondition = "";
         $scope.loadAll = function() {
-            Unit.query({page: $scope.page, per_page: 20}, function(result, headers) {
+            Unit.query({searchCondition: $scope.searchCondition, page: $scope.page, per_page: 20}, function(result, headers) {
                 $scope.links = ParseLinks.parse(headers('link'));
                 $scope.units = result;
             });
@@ -54,4 +55,8 @@ angular.module('icampusApp')
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
         };
+
+        $scope.search = function() {
+            $scope.loadAll();
+        }
     });
