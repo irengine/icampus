@@ -49,6 +49,7 @@
         <spring-security.version>4.0.0.RELEASE</spring-security.version>
         <swagger-springmvc.version>0.9.5</swagger-springmvc.version>
         <usertype-core.version>3.2.0.GA</usertype-core.version>
+        <spring-oxm.version>4.1.6.RELEASE</spring-oxm.version>
     </properties>
 
     <dependencies>
@@ -343,6 +344,21 @@
             <version>${spring-security.version}</version>
         </dependency>
         <!-- reporting -->
+        <!-- xml:jaxb -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${spring-oxm.version}</version>
+        </dependency>
+        <!-- integration -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-integration</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-jmx</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <resources>
